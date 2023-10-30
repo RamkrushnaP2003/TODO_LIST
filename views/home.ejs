@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h2><i class="fa-solid fa-circle-check"></i>&nbsp;Todo List</h2>
+
+    <% for(let list of lists) { %>
+    <div class="list">
+      <p class="time"><%= list.time %></p>
+      <b>:</b>
+      <h4 class="name"><%= list.name %></h4>
+      <hr />
+      <form
+        style="display: inline-block"
+        method="GET"
+        action="/lists/<%= list._id %>/edit"
+      >
+        <button class="btn-edit"><i class="fas fa-edit"></i></button>
+      </form>
+      <form
+        style="display: inline-block"
+        action="/lists/<%= list._id %>?_method=DELETE"
+        method="post"
+      >
+        <button class="btn-del">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+    <br />
+    <% } %>
+    <form action="/lists/new">
+      <button class="btn-add">NEW LIST</button>
+    </form>
+  </body>
+</html>

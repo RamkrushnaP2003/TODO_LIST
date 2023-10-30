@@ -1,0 +1,64 @@
+body {
+  background-color: linen;
+  margin: 1.5rem;
+}
+
+.list {
+  background-color: lightseagreen;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.time {
+  padding: 0.7rem;
+  display: inline-block;
+}
+
+.name {
+  padding: 0.7rem;
+  display: inline-block;
+}
+
+.list:hover {
+  box-shadow: 5px 5px 10px black;
+}
+
+.btn-add {
+  background-color: #050a30;
+  border-radius: 1rem;
+  border: 1px solid #7ec8e3;
+  color: #7ec8e3;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: coral;
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.btn-del {
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 7px;
+}
+
+.btn-del:hover {
+  box-shadow: 2px 2px 5px black;
+}
+
+.btn-edit:hover {
+  box-shadow: 2px 2px 5px black;
+}
+
+.btn-add:hover {
+    box-shadow: 2px 2px 5px black;
+}
